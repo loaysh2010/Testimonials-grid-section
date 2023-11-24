@@ -1,0 +1,121 @@
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 13px;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light-grayish-blue);
+    max-width: 1440;
+
+}
+/* ===============================================*/
+.container{
+    max-width:1100px;
+    margin: 160px auto;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.box{
+   border-radius: 10px; 
+   padding: 30px;
+   
+}
+.box .info{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.box .info img{
+    width:40px;
+    border-radius: 50%;
+}
+.box .info .text{
+    display: flex;
+    flex-direction: column;
+    
+}
+.box .info .text .type{
+    opacity: 0.5;
+}
+.box .content h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.box .content p {
+   line-height: 1.6; 
+   opacity: 0.7;
+}
+
+.voilet{
+    background-color: var(--Moderate-violet);
+    grid-column: 1 / span 2;
+    background-image: url(imgs/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 100px) 20px;
+}
+.voilet .info,
+.grayish-blue .info{
+    color: white;
+}
+.voilet .info img{
+    border: 2px solid var(--Light-gray);
+}
+.voilet .content,
+.grayish-blue .content{
+    color: white;
+}
+.grayish-blue {
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.k-white {
+    grid-column: 4;
+    grid-row: 1/span 2;
+    background-color: white; 
+    color: var(--Very-dark-grayish-blue);
+}
+
+.white{
+    background-color: white;
+    color:var(--Very-dark-grayish-blue);
+}
+
+.blackish-blue {
+    grid-column: 2/span 2;
+    grid-row: 2;
+    background-color: var(--Very-dark-blackish-blue);
+    color: var(--Light-gray);
+
+}
+.blackish-blue .info img{
+    border: 2px solid var(--Moderate-violet);
+}
+
+@media (max-width:767px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin:0 auto;
+        padding: 100px 0;
+    
+    }
+    .container .box{
+        max-width: 70%;
+        margin:0 auto;
+    }
+    
+}
